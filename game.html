@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SON</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<style>
+  #overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #17202A;
+    z-index: 2;
+    cursor: pointer;
+  }
+
+  #text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 50px;
+    color: white;
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+  }
+  * {
+    box-sizing:border-box;
+  }
+
+  body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .container {
+    padding: 64px;
+  }
+
+  .row:after {
+    content: "";
+    display: table;
+    clear: both
+  }
+
+  .column-66 {
+    float: left;
+    width: 66.66666%;
+    padding: 20px;
+  }
+
+  .column-33 {
+    float: left;
+    width: 33.33333%;
+    padding: 20px;
+  }
+
+  .large-font {
+    font-size: 48px;
+  }
+
+  .xlarge-font {
+    font-size: 64px
+  }
+
+  .button {
+    border: none;
+    color: white;
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #4CAF50;
+  }
+
+  img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+  }
+
+  @media screen and (max-width: 1000px) {
+    .column-66,
+    .column-33 {
+      width: 100%;
+      text-align: center;
+    }
+    img {
+      margin: auto;
+    }
+  }
+</style>
+</head>
+  <body>
+    <div style="text-align:center">
+      <h2>Son's project</h2>
+      <p><div><a href="index.html">HOME</a></div><div onclick="on()"><u style="color:#7D3C98">games</u></div></p>
+    </div>
+    <div id="overlay" onclick="off()">
+  <div id="text">The game has already begun.<div stlye="text-align:right">-developer-</div></div>
+</div>
+
+<script>
+function on() {
+  document.getElementById("overlay").style.display = "block";
+}
+
+function off() {
+  document.getElementById("overlay").style.display = "none";
+}
+</script>
+<div class="container">
+  <div class="row">
+    <div class="column-66">
+      <h1 class="xlarge-font" style="color:#2E86C1"><b>Google</b></h1>
+      <h1 class="large-font" style="color:#E74C3C;"><b>your home</b></h1>
+      <p><span style="font-size:36px; color:#F1C40F">Take photos like a pro.</span><a style="color:#2E86C1"> Refers to a US multinational IT company or Google-operated search engine that operates a web search, portal site, or related site, and whose advertising is the principal business area. It is the world's number one search engine, a multinational company celebrating its 20th anniversary in 2018, and the largest Internet company in existence. </a></p>
+      <button class="button"><u style="color:#7D3C98">Go to google</u></button>
+    </div>
+    <div class="column-33">
+        <img src="googel.jpg" width="335" height="471" title="First number  ">
+    </div>
+  </div>
+</div>
+
+<!-- Clarity Section -->
+<div class="container" style="background-color:#f1f1f1">
+  <div class="row">
+    <div class="column-33">
+      <img src="naver.jpg" alt="App" width="335" height="471" title="Second number">
+    </div>
+    <div class="column-66">
+      <h1 class="xlarge-font" style="color:seagreen;"><b>Naver</b></h1>
+      <h1 class="large-font" style="color:green;"><b>Come to Korea Browser</b></h1>
+      <button class="button" style="background-color:palered;"><u style="color:#7D3C98">Read More</u></button>
+    </div>
+  </div>
+</div>
+
+<!-- The App Section -->
+<div class="container">
+  <div class="row">
+    <div class="column-66">
+      <h1 class="xlarge-font" style="color:#17202A;"><b>DUK</b></h1>
+      <h1 class="large-font" style="color:#17202A;"><b>Do you want to know more?</b></h1>
+      <p style="color:#17202A;"> Deokwon High School is a general high school located in Uksu-dong, Suseong-gu, Daegu. It was initially located in Geum-dong, Suseong-gu, but moved to its current location in 2002.It is on the same ground as Deokwon Middle School. Coed, but divided It is one of the schools operated by Deokwon Academy.</p>
+      <button class="button"><u style="color:#7D3C98">Duk</u></button>
+    </div>
+    <div class="column-33">
+        <img src="duk.jpg" width="335" height="471" title="Third number">
+    </div>
+  </div>
+</div>
+<div class="container" style="background-color:#f1f1f1">
+  <div class="row">
+    <div class="column-33">
+      <img src="son.jpg" alt="App" width="335" height="471">
+    </div>
+    <div class="column-66">
+      <h1 class="xlarge-font" style="color:seagreen;"><b>Son</b></h1>
+      <h1 class="large-font" style="color:green;"><b>developer</b></h1>
+      <button class="button" style="background-color:palered;"><input type="number" id="ss"name="so" value="who is he?" style="background-color:#4CAF50"><button type="button" onclick="resultTrueFalse()" style="background-color:white">제출</button></button>
+<p id="second"></p>
+
+    </div>
+  </div>
+</div>
+<script>
+function resultTrueFalse() {
+    var x, text;
+    x = document.getElementById("ss").value;
+    if (x==726) {
+        text = "wow You succeeded!";
+    } else if(x!=726){
+        text = "Oops.. Try again";
+    }
+    document.getElementById("second").innerHTML = text;
+}
+</script>
+
+
+
+
+
+
+</body>
+</html>
